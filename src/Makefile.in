@@ -135,10 +135,11 @@ am_libelips_la_OBJECTS = Define.lo bn12_generate_curve.lo \
 	bn12_generate_parameter.lo bn12_init.lo \
 	bls12_generate_curve.lo bls12_generate_parameter.lo \
 	bls12_init.lo mpn.lo Fp.lo Fp2.lo Fp6.lo Fp12.lo EFp.lo \
-	EFp2.lo EFp6.lo EFp12.lo twist.lo sparse.lo JSF.lo \
-	bn12_miller.lo bn12_final_exp.lo bn12_pairing.lo \
+	EFp2.lo EFp6.lo EFp12.lo twist.lo sparse.lo line_projective.lo \
+	JSF.lo bn12_miller.lo bn12_final_exp.lo bn12_pairing.lo \
 	bls12_miller.lo bls12_final_exp.lo bls12_pairing.lo G1_SCM.lo \
-	G2_SCM.lo G3_exp.lo test.lo time.lo bn12_test.lo bls12_test.lo
+	G2_SCM.lo G3_exp.lo test.lo time.lo bn12_test.lo bls12_test.lo \
+	hello.lo
 libelips_la_OBJECTS = $(am_libelips_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -174,6 +175,7 @@ am__depfiles_remade = ./$(DEPDIR)/Define.Plo ./$(DEPDIR)/EFp.Plo \
 	./$(DEPDIR)/bn12_generate_parameter.Plo \
 	./$(DEPDIR)/bn12_init.Plo ./$(DEPDIR)/bn12_miller.Plo \
 	./$(DEPDIR)/bn12_pairing.Plo ./$(DEPDIR)/bn12_test.Plo \
+	./$(DEPDIR)/hello.Plo ./$(DEPDIR)/line_projective.Plo \
 	./$(DEPDIR)/mpn.Plo ./$(DEPDIR)/sparse.Plo \
 	./$(DEPDIR)/test.Plo ./$(DEPDIR)/time.Plo \
 	./$(DEPDIR)/twist.Plo
@@ -364,6 +366,7 @@ EFp6.c\
 EFp12.c\
 twist.c\
 sparse.c\
+line_projective.c\
 JSF.c\
 bn12_miller.c\
 bn12_final_exp.c\
@@ -378,6 +381,7 @@ test.c\
 time.c\
 bn12_test.c\
 bls12_test.c\
+hello.c\
 ../include/ELiPS/Define.h\
 ../include/ELiPS/bn12_generate_curve.h\
 ../include/ELiPS/bn12_generate_parameter.h\
@@ -396,6 +400,7 @@ bls12_test.c\
 ../include/ELiPS/EFp12.h\
 ../include/ELiPS/twist.h\
 ../include/ELiPS/sparse.h\
+../include/ELiPS/line_projective.h\
 ../include/ELiPS/JSF.h\
 ../include/ELiPS/bn12_miller.h\
 ../include/ELiPS/bn12_final_exp.h\
@@ -411,7 +416,8 @@ bls12_test.c\
 ../include/ELiPS/bn12_test.h\
 ../include/ELiPS/bls12_test.h\
 ../include/ELiPS/bn12.h\
-../include/ELiPS/bls12.h
+../include/ELiPS/bls12.h\
+../include/ELiPS/hello.h
 
 all: all-am
 
@@ -518,6 +524,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bn12_miller.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bn12_pairing.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bn12_test.Plo@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hello.Plo@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/line_projective.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mpn.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sparse.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test.Plo@am__quote@ # am--include-marker
@@ -712,6 +720,8 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/bn12_miller.Plo
 	-rm -f ./$(DEPDIR)/bn12_pairing.Plo
 	-rm -f ./$(DEPDIR)/bn12_test.Plo
+	-rm -f ./$(DEPDIR)/hello.Plo
+	-rm -f ./$(DEPDIR)/line_projective.Plo
 	-rm -f ./$(DEPDIR)/mpn.Plo
 	-rm -f ./$(DEPDIR)/sparse.Plo
 	-rm -f ./$(DEPDIR)/test.Plo
@@ -789,6 +799,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/bn12_miller.Plo
 	-rm -f ./$(DEPDIR)/bn12_pairing.Plo
 	-rm -f ./$(DEPDIR)/bn12_test.Plo
+	-rm -f ./$(DEPDIR)/hello.Plo
+	-rm -f ./$(DEPDIR)/line_projective.Plo
 	-rm -f ./$(DEPDIR)/mpn.Plo
 	-rm -f ./$(DEPDIR)/sparse.Plo
 	-rm -f ./$(DEPDIR)/test.Plo

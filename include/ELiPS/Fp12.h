@@ -289,7 +289,7 @@ extern void Fp12_inv_lazy_montgomery(Fp12 *ANS,Fp12 *A);
  * @brief LegendreSymbol on prime field
  *
  * @param[in]A --a pointer in Fp12.
- * 
+ *
  * @return int --a LegendreSymbol (0 or 1 or -1)
  */
 extern int  Fp12_legendre(Fp12 *A);
@@ -298,7 +298,7 @@ extern int  Fp12_legendre(Fp12 *A);
  * @brief Whether A is a Cubic non residure on prime field
  *
  * @param[in]A --a pointer in Fp12.
- * 
+ *
  * @return int --a CNR (0 or 1 or -1)
  */
 extern int  Fp12_isCNR(Fp12 *A);
@@ -317,7 +317,7 @@ extern void Fp12_sqrt(Fp12 *ANS,Fp12 *A);
  * @param[in]scalar --a pointer in Fp12.
  * @param[in]A --a pointer in Fp12.
  * @param[out]ANS --a pointer in Fp12.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern void Fp12_pow(Fp12 *ANS,Fp12 *A,mpz_t scalar);
@@ -327,7 +327,7 @@ extern void Fp12_pow(Fp12 *ANS,Fp12 *A,mpz_t scalar);
  *
  * @param[in]A --a pointer in Fp12.
  * @param[in]B --a pointer in Fp12.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp12_cmp(Fp12 *A,Fp12 *B);
@@ -337,7 +337,7 @@ extern int  Fp12_cmp(Fp12 *A,Fp12 *B);
  *
  * @param[in]A --a pointer in Fp12.
  * @param[in]UI --an unsigned long int.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern int  Fp12_cmp_ui(Fp12 *A,unsigned long int UI);
@@ -347,7 +347,7 @@ extern int  Fp12_cmp_ui(Fp12 *A,unsigned long int UI);
  *
  * @param[in]A --a pointer in Fp12.
  * @param[in]B --a pointer in mpn.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp12_cmp_mpn(Fp12 *A,mp_limb_t *B);
@@ -356,7 +356,7 @@ extern int  Fp12_cmp_mpn(Fp12 *A,mp_limb_t *B);
  * @brief Compare Fp12 type struct and zero
  *
  * @param[in]A --a pointer in Fp12.
- * 
+ *
  * @return int --(one 0 or other 1)
  */
 extern int  Fp12_cmp_zero(Fp12 *A);
@@ -365,7 +365,7 @@ extern int  Fp12_cmp_zero(Fp12 *A);
  * @brief Compare Fp12 type struct and one
  *
  * @param[in]A --a pointer in Fp12.
- * 
+ *
  * @return int --(zero 0 or other 1)
  */
 extern int  Fp12_cmp_one(Fp12 *A);
@@ -386,4 +386,7 @@ extern void Fp12_frobenius_map_p3_lazy_montgomery(Fp12 *ANS,Fp12 *A);
 extern void Fp12_frobenius_map_p6_montgomery(Fp12 *ANS,Fp12 *A);
 
 extern int Fp12_montgomery_trick(Fp12 *A_inv,Fp12 *A,int n);
+
+/*mine*/
+extern void Fp12_lshift(Fp12 *ANS,Fp12 *A,unsigned long int UI);
 #endif

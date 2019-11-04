@@ -86,8 +86,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-apple-darwin18.6.0
-host_triplet = x86_64-apple-darwin18.6.0
+build_triplet = x86_64-apple-darwin19.0.0
+host_triplet = x86_64-apple-darwin19.0.0
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
@@ -135,10 +135,11 @@ am_libelips_la_OBJECTS = Define.lo bn12_generate_curve.lo \
 	bn12_generate_parameter.lo bn12_init.lo \
 	bls12_generate_curve.lo bls12_generate_parameter.lo \
 	bls12_init.lo mpn.lo Fp.lo Fp2.lo Fp6.lo Fp12.lo EFp.lo \
-	EFp2.lo EFp6.lo EFp12.lo twist.lo sparse.lo JSF.lo \
-	bn12_miller.lo bn12_final_exp.lo bn12_pairing.lo \
+	EFp2.lo EFp6.lo EFp12.lo twist.lo sparse.lo line_projective.lo \
+	JSF.lo bn12_miller.lo bn12_final_exp.lo bn12_pairing.lo \
 	bls12_miller.lo bls12_final_exp.lo bls12_pairing.lo G1_SCM.lo \
-	G2_SCM.lo G3_exp.lo test.lo time.lo bn12_test.lo bls12_test.lo
+	G2_SCM.lo G3_exp.lo test.lo time.lo bn12_test.lo bls12_test.lo \
+	hello.lo
 libelips_la_OBJECTS = $(am_libelips_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -174,6 +175,7 @@ am__depfiles_remade = ./$(DEPDIR)/Define.Plo ./$(DEPDIR)/EFp.Plo \
 	./$(DEPDIR)/bn12_generate_parameter.Plo \
 	./$(DEPDIR)/bn12_init.Plo ./$(DEPDIR)/bn12_miller.Plo \
 	./$(DEPDIR)/bn12_pairing.Plo ./$(DEPDIR)/bn12_test.Plo \
+	./$(DEPDIR)/hello.Plo ./$(DEPDIR)/line_projective.Plo \
 	./$(DEPDIR)/mpn.Plo ./$(DEPDIR)/sparse.Plo \
 	./$(DEPDIR)/test.Plo ./$(DEPDIR)/time.Plo \
 	./$(DEPDIR)/twist.Plo
@@ -224,13 +226,13 @@ ETAGS = etags
 CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/missing aclocal-1.16
+ACLOCAL = ${SHELL} /Users/hattoridaichi/ELiPS/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/missing autoconf
-AUTOHEADER = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/missing autoheader
-AUTOMAKE = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/missing automake-1.16
+AUTOCONF = ${SHELL} /Users/hattoridaichi/ELiPS/missing autoconf
+AUTOHEADER = ${SHELL} /Users/hattoridaichi/ELiPS/missing autoheader
+AUTOMAKE = ${SHELL} /Users/hattoridaichi/ELiPS/missing automake-1.16
 AWK = awk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -268,7 +270,7 @@ LIPO = lipo
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/missing makeinfo
+MAKEINFO = ${SHELL} /Users/hattoridaichi/ELiPS/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = .././install-sh -c -d
 NM = /usr/bin/nm -B
@@ -291,10 +293,10 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 1.0.9
-abs_builddir = /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/src
-abs_srcdir = /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/src
-abs_top_builddir = /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9
-abs_top_srcdir = /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9
+abs_builddir = /Users/hattoridaichi/ELiPS/src
+abs_srcdir = /Users/hattoridaichi/ELiPS/src
+abs_top_builddir = /Users/hattoridaichi/ELiPS
+abs_top_srcdir = /Users/hattoridaichi/ELiPS
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -305,10 +307,10 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-apple-darwin18.6.0
+build = x86_64-apple-darwin19.0.0
 build_alias = 
 build_cpu = x86_64
-build_os = darwin18.6.0
+build_os = darwin19.0.0
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
@@ -316,15 +318,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-apple-darwin18.6.0
+host = x86_64-apple-darwin19.0.0
 host_alias = 
 host_cpu = x86_64
-host_os = darwin18.6.0
+host_os = darwin19.0.0
 host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/takahashi/Desktop/ELiPS_version/ELiPS-1.0.9/install-sh
+install_sh = ${SHELL} /Users/hattoridaichi/ELiPS/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -364,6 +366,7 @@ EFp6.c\
 EFp12.c\
 twist.c\
 sparse.c\
+line_projective.c\
 JSF.c\
 bn12_miller.c\
 bn12_final_exp.c\
@@ -378,6 +381,7 @@ test.c\
 time.c\
 bn12_test.c\
 bls12_test.c\
+hello.c\
 ../include/ELiPS/Define.h\
 ../include/ELiPS/bn12_generate_curve.h\
 ../include/ELiPS/bn12_generate_parameter.h\
@@ -396,6 +400,7 @@ bls12_test.c\
 ../include/ELiPS/EFp12.h\
 ../include/ELiPS/twist.h\
 ../include/ELiPS/sparse.h\
+../include/ELiPS/line_projective.h\
 ../include/ELiPS/JSF.h\
 ../include/ELiPS/bn12_miller.h\
 ../include/ELiPS/bn12_final_exp.h\
@@ -411,7 +416,8 @@ bls12_test.c\
 ../include/ELiPS/bn12_test.h\
 ../include/ELiPS/bls12_test.h\
 ../include/ELiPS/bn12.h\
-../include/ELiPS/bls12.h
+../include/ELiPS/bls12.h\
+../include/ELiPS/hello.h
 
 all: all-am
 
@@ -518,6 +524,8 @@ include ./$(DEPDIR)/bn12_init.Plo # am--include-marker
 include ./$(DEPDIR)/bn12_miller.Plo # am--include-marker
 include ./$(DEPDIR)/bn12_pairing.Plo # am--include-marker
 include ./$(DEPDIR)/bn12_test.Plo # am--include-marker
+include ./$(DEPDIR)/hello.Plo # am--include-marker
+include ./$(DEPDIR)/line_projective.Plo # am--include-marker
 include ./$(DEPDIR)/mpn.Plo # am--include-marker
 include ./$(DEPDIR)/sparse.Plo # am--include-marker
 include ./$(DEPDIR)/test.Plo # am--include-marker
@@ -712,6 +720,8 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/bn12_miller.Plo
 	-rm -f ./$(DEPDIR)/bn12_pairing.Plo
 	-rm -f ./$(DEPDIR)/bn12_test.Plo
+	-rm -f ./$(DEPDIR)/hello.Plo
+	-rm -f ./$(DEPDIR)/line_projective.Plo
 	-rm -f ./$(DEPDIR)/mpn.Plo
 	-rm -f ./$(DEPDIR)/sparse.Plo
 	-rm -f ./$(DEPDIR)/test.Plo
@@ -789,6 +799,8 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/bn12_miller.Plo
 	-rm -f ./$(DEPDIR)/bn12_pairing.Plo
 	-rm -f ./$(DEPDIR)/bn12_test.Plo
+	-rm -f ./$(DEPDIR)/hello.Plo
+	-rm -f ./$(DEPDIR)/line_projective.Plo
 	-rm -f ./$(DEPDIR)/mpn.Plo
 	-rm -f ./$(DEPDIR)/sparse.Plo
 	-rm -f ./$(DEPDIR)/test.Plo

@@ -6,6 +6,11 @@ int BN12_X6_2_binary[BN12_X6_2_length+1];
 int BLS12_X_binary[BLS12_X_length+1];
 int BLS12_X2_binary[BLS12_X2_length+1];
 
+/*add*/
+int BLS18_X_binary[BLS18_X_length+1];
+int BLS18_X2_binary[BLS18_X2_length+1];
+
+
 
 int cost_add,cost_add_ui,cost_sub,cost_sub_ui,cost_mul,cost_mul_ui,cost_sqr,cost_inv,cost_mod;
 
@@ -26,6 +31,10 @@ mp_limb_t Two_inv[FPLIMB];
 mpz_t Two_inv_z;
 mpz_t root_2,root_X;
 mpz_t EFp_total,EFp12_total;
+
+/*add*/
+mpz_t EFp18_total;
+
 Fp2 frobenius_constant[12][6];
 Fp2 skew_frobenius_constant[12][2];
 mp_limb_t curve_b[FPLIMB];
@@ -47,3 +56,6 @@ cost MILLER_OPT_MONTGOMERY_COST,FINALEXP_OPT_MONTGOMERY_COST;
 float G1SCM_PLAIN,G1SCM_2SPLIT,G1SCM_2SPLIT_JSF;
 float G2SCM_PLAIN,G2SCM_2SPLIT,G2SCM_2SPLIT_JSF,G2SCM_4SPLIT;
 float G3EXP_PLAIN,G3EXP_2SPLIT,G3EXP_2SPLIT_JSF,G3EXP_4SPLIT;
+
+/*mine*/
+Fp Fp_two_inv;

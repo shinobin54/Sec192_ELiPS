@@ -320,7 +320,7 @@ extern void Fp_inv_montgomery(Fp *ANS,Fp *A);
  * @brief LegendreSymbol on prime field
  *
  * @param[in]A --a pointer in Fp.
- * 
+ *
  * @return int --a LegendreSymbol (0 or 1 or -1)
  */
 extern int  Fp_legendre(Fp *A);
@@ -329,7 +329,7 @@ extern int  Fp_legendre(Fp *A);
  * @brief Whether A is a Cubic non residure on prime field
  *
  * @param[in]A --a pointer in Fp.
- * 
+ *
  * @return int --a CNR (0 or 1 or -1)
  */
 extern int  Fp_isCNR(Fp *A);
@@ -348,7 +348,7 @@ extern void Fp_sqrt(Fp *ANS,Fp *A);
  * @param[in]scalar --a pointer in Fp.
  * @param[in]A --a pointer in Fp.
  * @param[out]ANS --a pointer in Fp.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern void Fp_pow(Fp *ANS,Fp *A,mpz_t scalar);
@@ -360,7 +360,7 @@ extern void Fp_pow(Fp *ANS,Fp *A,mpz_t scalar);
  * @param[in]r --a pointer in mpn.
  * @param[in]n --a size of r.
  * @param[out]ans --a pointer answer.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern void Fp_pow_mpn(Fp *ans,Fp *a,mp_limb_t *r,mp_size_t n);
@@ -370,7 +370,7 @@ extern void Fp_pow_mpn(Fp *ans,Fp *a,mp_limb_t *r,mp_size_t n);
  *
  * @param[in]A --a pointer in Fp.
  * @param[in]B --a pointer in Fp.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp_cmp(Fp *A,Fp *B);
@@ -380,7 +380,7 @@ extern int  Fp_cmp(Fp *A,Fp *B);
  *
  * @param[in]A --a pointer in Fp.
  * @param[in]UI --an unsigned long int.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern int  Fp_cmp_ui(Fp *A,unsigned long int UI);
@@ -390,7 +390,7 @@ extern int  Fp_cmp_ui(Fp *A,unsigned long int UI);
  *
  * @param[in]A --a pointer in Fp.
  * @param[in]B --a pointer in mpn.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp_cmp_mpn(Fp *A,mp_limb_t *B);
@@ -399,7 +399,7 @@ extern int  Fp_cmp_mpn(Fp *A,mp_limb_t *B);
  * @brief Compare Fp type struct and zero
  *
  * @param[in]A --a pointer in Fp.
- * 
+ *
  * @return int --(one 0 or other 1)
  */
 extern int  Fp_cmp_zero(Fp *A);
@@ -408,11 +408,16 @@ extern int  Fp_cmp_zero(Fp *A);
  * @brief Compare Fp type struct and one
  *
  * @param[in]A --a pointer in Fp.
- * 
+ *
  * @return int --(zero 0 or other 1)
  */
 extern int  Fp_cmp_one(Fp *A);
 
 extern int Fp_montgomery_trick(Fp *A_inv,Fp *A,int n);
 extern int Fp_montgomery_trick_montgomery(Fp *A_inv,Fp *A,int n);
+
+/*mine*/
+extern void Fp_two_inv_set();
+extern void Fp_rshift2(Fp *ANS,Fp *A);
+extern void Fp_dbl(Fp *ANS,Fp *A);
 #endif

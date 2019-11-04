@@ -3,6 +3,8 @@
 
 #include <ELiPS/sparse.h>
 #include <ELiPS/twist.h>
+//mine
+#include <ELiPS/line_projective.h>
 
 //miller
 
@@ -33,6 +35,8 @@ extern void BLS12_Miller_algo_for_opt_ate(Fp12 *ANS,EFp12 *P,EFp12 *Q);
  */
 extern void BLS12_Miller_algo_for_opt_ate_lazy(Fp12 *ANS,EFp12 *P,EFp12 *Q);
 extern void BLS12_Miller_algo_for_opt_ate_lazy_montgomery(Fp12 *ANS,EFp12 *P,EFp12 *Q);
-
-
+/*mine*/
+extern void Miller_opt_projective_plain(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+extern void Miller_opt_projective_projective(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+extern void Miller_debag(Fp12 *rop,EFp12 *p,EFp12 *q);
 #endif

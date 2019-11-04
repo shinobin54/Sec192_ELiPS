@@ -2,6 +2,7 @@
 SUBDIRS = src
 
 AM_CPPFLAGS = -I../include
+ACLOCAL_AMFLAGS = -I m4
 
 library_includedir = $(includedir)/ELiPS
 library_include_HEADERS = include/ELiPS/Define.h\
@@ -22,6 +23,7 @@ include/ELiPS/EFp6.h\
 include/ELiPS/EFp12.h\
 include/ELiPS/twist.h\
 include/ELiPS/sparse.h\
+include/ELiPS/line_projective.h\
 include/ELiPS/JSF.h\
 include/ELiPS/bn12_miller.h\
 include/ELiPS/bn12_final_exp.h\
@@ -37,4 +39,5 @@ include/ELiPS/test.h\
 include/ELiPS/bn12_test.h\
 include/ELiPS/bls12_test.h\
 include/ELiPS/bn12.h\
-include/ELiPS/bls12.h
+include/ELiPS/bls12.h\
+include/ELiPS/hello.h

@@ -64,7 +64,7 @@ extern void EFp12_set_neg(EFp12 *ANS,EFp12 *A);
  *
  * @param[in]A --a pointer in EFp12.
  * @param[in]B --a pointer in EFp12.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 int  EFp12_cmp(EFp12 *A,EFp12 *B);
@@ -149,5 +149,13 @@ extern void EFp12_SCM(EFp12 *ANS,EFp12 *P,mpz_t scalar);
  */
 extern void EFp12_SCM_lazy(EFp12 *ANS,EFp12 *P,mpz_t scalar);
 
-#endif
+/*mine*/
+extern void EFpJ12_init(EFpJ12 *P);
+extern void EFpJ12_printf(char *str,EFpJ12 *P);
+extern void EFpJ12_set(EFpJ12 *ANS,EFpJ12 *A);
+extern void EFp12_to_EFpJ12(EFpJ12 *ANS,EFp12 *A);
+extern void EFpJ12_set_neg(EFpJ12 *ANS,EFpJ12 *A);
+extern void EFp12_ECD_Jacobian(EFpJ12 *ANS,EFpJ12 *P);
+extern void EFp12_ECA_Jacobian(EFpJ12 *ANS,EFpJ12 *P1,EFpJ12 *P2);
 
+#endif

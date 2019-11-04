@@ -51,5 +51,8 @@ extern void BLS12_Opt_ate_pairing_lazy(Fp12 *ANS,EFp12 *P,EFp12 *Q);
 extern void BLS12_Opt_ate_pairing_compress_lazy(Fp12 *ANS,EFp12 *P,EFp12 *Q);
 extern void BLS12_Opt_ate_pairing_compress_lazy_montgomery(Fp12 *ANS,EFp12 *P,EFp12 *Q);
 
-
+/*mine*/
+extern void BLS12_Plain_ate_projective_plain(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+extern void BLS12_Plain_ate_projective_projective(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+extern void BLS12_Plain_ate_debag(Fp12 *ANS,EFp12 *P,EFp12 *Q);
 #endif

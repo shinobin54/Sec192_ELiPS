@@ -315,7 +315,7 @@ extern void Fp2_inv_lazy_montgomery(Fp2 *ANS,Fp2 *A);
  * @brief LegendreSymbol on prime field
  *
  * @param[in]A --a pointer in Fp2.
- * 
+ *
  * @return int --a LegendreSymbol (0 or 1 or -1)
  */
 extern int  Fp2_legendre(Fp2 *A);
@@ -324,7 +324,7 @@ extern int  Fp2_legendre(Fp2 *A);
  * @brief Whether A is a Cubic non residure on prime field
  *
  * @param[in]A --a pointer in Fp2.
- * 
+ *
  * @return int --a CNR (0 or 1 or -1)
  */
 extern int  Fp2_isCNR(Fp2 *A);
@@ -343,7 +343,7 @@ extern void Fp2_sqrt(Fp2 *ANS,Fp2 *A);
  * @param[in]scalar --a pointer in Fp2.
  * @param[in]A --a pointer in Fp2.
  * @param[out]ANS --a pointer in Fp2.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern void Fp2_pow(Fp2 *ANS,Fp2 *A,mpz_t scalar);
@@ -353,7 +353,7 @@ extern void Fp2_pow(Fp2 *ANS,Fp2 *A,mpz_t scalar);
  *
  * @param[in]A --a pointer in Fp2.
  * @param[in]B --a pointer in Fp2.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp2_cmp(Fp2 *A,Fp2 *B);
@@ -363,7 +363,7 @@ extern int  Fp2_cmp(Fp2 *A,Fp2 *B);
  *
  * @param[in]A --a pointer in Fp2.
  * @param[in]UI --an unsigned long int.
- * 
+ *
  * @return int --(A=UI 0 or other 1)
  */
 extern int  Fp2_cmp_ui(Fp2 *A,unsigned long int UI);
@@ -373,7 +373,7 @@ extern int  Fp2_cmp_ui(Fp2 *A,unsigned long int UI);
  *
  * @param[in]A --a pointer in Fp2.
  * @param[in]B --a pointer in mpn.
- * 
+ *
  * @return int --(A=B 0 or other 1)
  */
 extern int  Fp2_cmp_mpn(Fp2 *A,mp_limb_t *B);
@@ -382,7 +382,7 @@ extern int  Fp2_cmp_mpn(Fp2 *A,mp_limb_t *B);
  * @brief Compare Fp2 type struct and zero
  *
  * @param[in]A --a pointer in Fp2.
- * 
+ *
  * @return int --(one 0 or other 1)
  */
 extern int  Fp2_cmp_zero(Fp2 *A);
@@ -391,11 +391,14 @@ extern int  Fp2_cmp_zero(Fp2 *A);
  * @brief Compare Fp2 type struct and one
  *
  * @param[in]A --a pointer in Fp2.
- * 
+ *
  * @return int --(zero 0 or other 1)
  */
 extern int  Fp2_cmp_one(Fp2 *A);
 
 extern int Fp2_montgomery_trick(Fp2 *A_inv,Fp2 *A,int n);
 extern int Fp2_montgomery_trick_montgomery(Fp2 *A_inv,Fp2 *A,int n);
+
+/*mine*/
+extern void Fp2_dbl(Fp2 *ANS,Fp2 *A);
 #endif

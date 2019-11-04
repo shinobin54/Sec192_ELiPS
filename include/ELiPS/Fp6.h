@@ -360,4 +360,7 @@ extern int  Fp6_cmp_zero(Fp6 *A);
  */
 extern int  Fp6_cmp_one(Fp6 *A);
 
+
+/*mine*/
+extern void Fp6_lshift(Fp6 *ANS,Fp6 *A,unsigned long int UI);
 #endif

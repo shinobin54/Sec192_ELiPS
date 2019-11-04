@@ -21,6 +21,7 @@ EFp6.c\
 EFp12.c\
 twist.c\
 sparse.c\
+line_projective.c\
 JSF.c\
 bn12_miller.c\
 bn12_final_exp.c\
@@ -35,6 +36,7 @@ test.c\
 time.c\
 bn12_test.c\
 bls12_test.c\
+hello.c\
 ../include/ELiPS/Define.h\
 ../include/ELiPS/bn12_generate_curve.h\
 ../include/ELiPS/bn12_generate_parameter.h\
@@ -53,6 +55,7 @@ bls12_test.c\
 ../include/ELiPS/EFp12.h\
 ../include/ELiPS/twist.h\
 ../include/ELiPS/sparse.h\
+../include/ELiPS/line_projective.h\
 ../include/ELiPS/JSF.h\
 ../include/ELiPS/bn12_miller.h\
 ../include/ELiPS/bn12_final_exp.h\
@@ -68,4 +71,5 @@ bls12_test.c\
 ../include/ELiPS/bn12_test.h\
 ../include/ELiPS/bls12_test.h\
 ../include/ELiPS/bn12.h\
-../include/ELiPS/bls12.h
+../include/ELiPS/bls12.h\
+../include/ELiPS/hello.h

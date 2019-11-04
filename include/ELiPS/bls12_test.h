@@ -13,4 +13,9 @@ extern int BLS12_test_opt_ate_pairing();
 extern int BLS12_test_G1_SCM(int scm);
 extern int BLS12_test_G2_SCM(int scm);
 extern int BLS12_test_G3_EXP(int exp);
+
+/*mine*/
+extern int BLS12_test_opt_ate_pairing_projective_projective(int pairing);
+extern int BLS12_test_opt_ate_pairing_projective_plain(int pairing);
+extern int BLS12_test_opt_ate_pairing_debag(int pairing);
 #endif

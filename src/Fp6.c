@@ -636,3 +636,9 @@ int  Fp6_cmp_one(Fp6 *A){
     }
     return 1;
 }
+/*mine*/
+void Fp6_lshift(Fp6 *ANS,Fp6 *A,unsigned long int UI){
+    Fp2_lshift(&ANS->x0,&A->x0,UI);
+    Fp2_lshift(&ANS->x1,&A->x1,UI);
+    Fp2_lshift(&ANS->x2,&A->x2,UI);
+}

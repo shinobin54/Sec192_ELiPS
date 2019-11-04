@@ -40,6 +40,11 @@
 #define BLS12_X_length 77
 #define BLS12_X2_length 76
 
+/*add*/
+#define BLS18_X_length 64
+#define BLS18_X2_length 63
+
+
 //#define BLS12_X_length 76
 //#define BLS12_X2_length 75
 
@@ -55,6 +60,11 @@ extern int BN12_X6_2_binary[BN12_X6_2_length+1];
 
 extern int BLS12_X_binary[BLS12_X_length+1];
 extern int BLS12_X2_binary[BLS12_X2_length+1];
+
+/*add*/
+extern int BLS18_X_binary[BLS18_X_length+1];
+extern int BLS18_X2_binary[BLS18_X2_length+1];
+
 
 extern int cost_add,cost_add_ui,cost_sub,cost_sub_ui,cost_mul,cost_mul_ui,cost_sqr,cost_inv,cost_mod;
 
@@ -200,6 +210,10 @@ extern mp_limb_t Two_inv[FPLIMB];
 extern mpz_t Two_inv_z;
 extern mpz_t root_2,root_X;
 extern mpz_t EFp_total,EFp12_total;
+
+/*add*/
+extern mpz_t EFp18_total;
+
 extern Fp2 frobenius_constant[12][6];
 extern Fp2 skew_frobenius_constant[12][2];
 extern mp_limb_t curve_b[FPLIMB];
@@ -223,4 +237,14 @@ extern cost MILLER_OPT_MONTGOMERY_COST,FINALEXP_OPT_MONTGOMERY_COST;
 extern float G1SCM_PLAIN,G1SCM_2SPLIT,G1SCM_2SPLIT_JSF;
 extern float G2SCM_PLAIN,G2SCM_2SPLIT,G2SCM_2SPLIT_JSF,G2SCM_4SPLIT;
 extern float G3EXP_PLAIN,G3EXP_2SPLIT,G3EXP_2SPLIT_JSF,G3EXP_4SPLIT;
+
+
+/*============================================================================*/
+/* MINE                                                             */
+/*============================================================================*/
+extern Fp Fp_two_inv;
+typedef struct{
+	Fp12 x,z;
+}FpJ12;
+
 #endif
