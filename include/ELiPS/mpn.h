@@ -1,7 +1,7 @@
 #ifndef MPN_H
 #define MPN_H
 
-#include <ELiPS/Define.h>
+#include <ELiPS/define.h>
 
 
 /**
@@ -225,5 +225,5 @@ extern void mpn_tdiv_q_ui(mp_limb_t *ans,mp_limb_t *a,mp_size_t size_a,unsigned 
  * @param[in]p --a pointer of prime.
  */
 extern void mpn_invert(mp_limb_t *ANS,mp_limb_t *A,mp_limb_t *p);
-
+extern void mpn_printf(char *str,mp_limb_t *A);
 #endif

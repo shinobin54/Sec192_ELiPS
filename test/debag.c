@@ -3,40 +3,40 @@
 /*============================================================================*/
 /* main                                                                       */
 /*============================================================================*/
+int main(void)
+{
+  //BN12_init();
+  //BN12_print_parameters();
+  bls12_init();
+  bls12_print_parameters();
 
-int main(void){
-  int error;
-  BLS12_init();
-  BLS12_print_parameters();
+  //test_Field(100000,10000,10000,10000,10);
+  //test_Frobenius_map();
+  //test_skew_frobenius_map();
+  //test_twist();
+  //test_mod(10000000,100000);
 
-  EFp12 P,Q,T;
-  EFp12_init(&P);
-  EFp12_init(&Q);
-  EFp12_init(&T);
+  //test_EFp(10,10,10);
+  //test_EFp2(10,10,10);
+  //test_EFp12(10,10,10);
 
-  EFpJ12 JP,JT;
-  EFpJ12_init(&JP);
-  EFpJ12_init(&JT);
+  //BN12_test_rational_point();
+  //BN12_test_plain_ate_pairing();
+  //BN12_test_opt_ate_pairing(10);
+  //BN12_test_x_ate_pairing();
+  //BN12_test_G1_SCM(100);
+  //BN12_test_G2_SCM(10);
+  //BN12_test_G3_EXP(10);
 
-  Fp12 Z,Z2;
-  Fp12_init(&Z);
-    Fp12_init(&Z2);
+  //bls12_test_rational_point();
+  //bls12_test_plain_ate_pairing();
+  bls12_test_opt_ate_pairing(100);
+  //bls12_test_x_ate_pairing();
+  //bls12_test_G1_SCM(100);
+  //bls12_test_G2_SCM(10);
+  //bls12_test_G3_EXP(10);
 
-  FpJ12 JZ,JZ2;
-  FpJ12_init(&JZ);
-  FpJ12_init(&JZ2);
-
-
-
-  gmp_randinit_default (state);
-    gmp_randseed_ui(state,(unsigned long)time(NULL));
-
-
-
-  printf("debag start\n");
-  if(BLS12_test_opt_ate_pairing_debag(2)==1){
-    printf("ng\n");
-  }
-
-
-  }
+  //Fast_test_bls12(100,100,100,100);
+  //test_All();
+  return 0;
+}

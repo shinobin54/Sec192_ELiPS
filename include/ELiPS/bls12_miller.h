@@ -1,42 +1,42 @@
-#ifndef BLs12_MILLER_H
-#define BLs12_MILLER_H
+#ifndef BLS12_MILLER_H
+#define BLS12_MILLER_H
 
-#include <ELiPS/sparse.h>
+#include <ELiPS/line_calculate.h>
 #include <ELiPS/twist.h>
-//mine
-#include <ELiPS/line_projective.h>
 
 //miller
 
 /**
  * @brief Calculation Miller's Alg on prime field for ate pairing
  *
- * @param[out]ANS --a pointer of answer in Fp12.
- * @param[in]P --a pointer in EFp12 on G1.
- * @param[in]Q --a pointer in EFp12 on G2.
+ * @param[out]ANS --a pointer of answer in fp12_t.
+ * @param[in]P --a pointer in efp12_t on G1.
+ * @param[in]Q --a pointer in efp12_t on G2.
  */
-extern void BLS12_Miller_algo_for_plain_ate(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+extern void bls12_miller_algo_for_plain_ate(fp12_t *ANS, efp12_t *P, efp12_t *Q);
 
 /**
  * @brief Calculation Miller's Alg on prime field for Optimal-ate pairing
  *
- * @param[out]ANS --a pointer of answer in Fp12.
- * @param[in]P --a pointer in EFp12 on G1.
- * @param[in]Q --a pointer in EFp12 on G2.
+ * @param[out]ANS --a pointer of answer in fp12_t.
+ * @param[in]P --a pointer in efp12_t on G1.
+ * @param[in]Q --a pointer in efp12_t on G2.
  */
-extern void BLS12_Miller_algo_for_opt_ate(Fp12 *ANS,EFp12 *P,EFp12 *Q);
+
+//TODO: opt_ate->optate
+extern void bls12_miller_algo_for_opt_ate(fp12_t *ANS, efp12_t *P, efp12_t *Q);
 
 /**
  * @brief Calculation Miller's Alg on prime field for Optimal-ate pairing (Lazy Reduction)
  *
- * @param[out]ANS --a pointer of answer in Fp12.
- * @param[in]P --a pointer in EFp12 on G1.
- * @param[in]Q --a pointer in EFp12 on G2.
+ * @param[out]ANS --a pointer of answer in fp12_t.
+ * @param[in]P --a pointer in efp12_t on G1.
+ * @param[in]Q --a pointer in efp12_t on G2.
  */
-extern void BLS12_Miller_algo_for_opt_ate_lazy(Fp12 *ANS,EFp12 *P,EFp12 *Q);
-extern void BLS12_Miller_algo_for_opt_ate_lazy_montgomery(Fp12 *ANS,EFp12 *P,EFp12 *Q);
-/*mine*/
-extern void Miller_opt_projective_plain(Fp12 *ANS,EFp12 *P,EFp12 *Q);
-extern void Miller_opt_projective_projective(Fp12 *ANS,EFp12 *P,EFp12 *Q);
-extern void Miller_debag(Fp12 *rop,EFp12 *p,EFp12 *q);
+extern void bls12_miller_algo_for_opt_ate_lazy(fp12_t *ANS, efp12_t *P, efp12_t *Q);
+extern void bls12_miller_algo_for_opt_ate_projective_lazy(fp12_t *ANS, efp12_t *P, efp12_t *Q);
+extern void bls12_miller_algo_for_opt_ate_lazy_montgomery(fp12_t *ANS, efp12_t *P, efp12_t *Q);
+extern void bls12_miller_algo_for_opt_ate_projective_lazy_montgomery(fp12_t *ANS, efp12_t *P, efp12_t *Q);
+extern void bls12_miller_algo_for_opt_ate_projective_7sparse_lazy_montgomery(fp12_t *ANS, efp12_t *P, efp12_t *Q);
+
 #endif
