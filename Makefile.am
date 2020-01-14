@@ -14,6 +14,8 @@ include/ELiPS/mpn.h\
 include/ELiPS/fp.h\
 include/ELiPS/fp2.h\
 include/ELiPS/fp4.h\
+include/ELiPS/fp12.h\
 include/ELiPS/efp.h\
 include/ELiPS/efp2.h\
-include/ELiPS/efp4.h
+include/ELiPS/efp4.h\
+include/ELiPS/efp12.h

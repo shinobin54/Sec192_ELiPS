@@ -133,7 +133,7 @@ LTLIBRARIES = $(lib_LTLIBRARIES)
 libelips_la_DEPENDENCIES = bls12/bls12_generate_curve.lo \
 	bls12/bls12_generate_parameter.lo bls12/bls12_init.lo
 am_libelips_la_OBJECTS = define.lo scalar.lo mpn.lo fp.lo fp2.lo \
-	fp4.lo efp.lo efp2.lo efp4.lo time.lo
+	fp4.lo fp12.lo efp.lo efp2.lo efp4.lo efp12.lo time.lo
 libelips_la_OBJECTS = $(am_libelips_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -378,9 +378,11 @@ mpn.c\
 fp.c\
 fp2.c\
 fp4.c\
+fp12.c\
 efp.c\
 efp2.c\
 efp4.c\
+efp12.c\
 time.c\
 ../include/ELiPS/define.h\
 ../include/ELiPS/scalar.h\
@@ -388,9 +390,11 @@ time.c\
 ../include/ELiPS/fp.h\
 ../include/ELiPS/fp2.h\
 ../include/ELiPS/fp4.h\
+../include/ELiPS/fp12.h\
 ../include/ELiPS/efp.h\
 ../include/ELiPS/efp2.h\
 ../include/ELiPS/efp4.h\
+../include/ELiPS/efp12.h\
 ../include/ELiPS/time.h
 
 all: all-recursive
@@ -473,9 +477,11 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/define.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/efp.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/efp12.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/efp2.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/efp4.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fp.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fp12.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fp2.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fp4.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mpn.Plo@am__quote@

@@ -124,14 +124,14 @@ void fp4_mul_mpn(fp4_t *ANS,fp4_t *A,mp_limb_t *B){
 }
 void fp4_mul_basis(fp4_t *ANS,fp4_t *A){
     static fp4_t tmp1_fp4;
-    fp_set(&tmp1_fp4.x1,&A->x0);
+    fp2_set(&tmp1_fp4.x1,&A->x0);
     
     fp2_mul_basis(&tmp1_fp4.x0,&A->x1);
     fp4_set(ANS,&tmp1_fp4);
 }
 void fp4_mul_basis_lazy(fp4_t *ANS,fp4_t *A){
     static fp4_t tmp1_fp4;
-    fp_set(&tmp1_fp4.x1,&A->x0);
+    fp2_set(&tmp1_fp4.x1,&A->x0);
     
     fp2_mul_basis_lazy(&tmp1_fp4.x0,&A->x1);
     fp4_set(ANS,&tmp1_fp4);

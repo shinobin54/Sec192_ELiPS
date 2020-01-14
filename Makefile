@@ -235,13 +235,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/ELiPS256/missing" aclocal-1.15
+ACLOCAL = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/missing" aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/ELiPS256/missing" autoconf
-AUTOHEADER = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/ELiPS256/missing" autoheader
-AUTOMAKE = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/ELiPS256/missing" automake-1.15
+AUTOCONF = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/missing" autoconf
+AUTOHEADER = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/missing" autoheader
+AUTOMAKE = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/missing" automake-1.15
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -279,7 +279,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/ELiPS256/missing" makeinfo
+MAKEINFO = ${SHELL} "/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/missing" makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -302,10 +302,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 1.0.11
-abs_builddir = /mnt/c/Users/daichi hattori/workspace/ELiPS256
-abs_srcdir = /mnt/c/Users/daichi hattori/workspace/ELiPS256
-abs_top_builddir = /mnt/c/Users/daichi hattori/workspace/ELiPS256
-abs_top_srcdir = /mnt/c/Users/daichi hattori/workspace/ELiPS256
+abs_builddir = /mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS
+abs_srcdir = /mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS
+abs_top_builddir = /mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS
+abs_top_srcdir = /mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -335,7 +335,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} '/mnt/c/Users/daichi hattori/workspace/ELiPS256/install-sh'
+install_sh = ${SHELL} '/mnt/c/Users/daichi hattori/workspace/Sec192_ELiPS/install-sh'
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -369,9 +369,11 @@ include/ELiPS/mpn.h\
 include/ELiPS/fp.h\
 include/ELiPS/fp2.h\
 include/ELiPS/fp4.h\
+include/ELiPS/fp12.h\
 include/ELiPS/efp.h\
 include/ELiPS/efp2.h\
-include/ELiPS/efp4.h
+include/ELiPS/efp4.h\
+include/ELiPS/efp12.h
 
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

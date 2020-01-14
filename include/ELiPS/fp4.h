@@ -326,4 +326,7 @@ extern int  fp4_cmp_zero(fp4_t *A);
 extern int  fp4_cmp_one(fp4_t *A);
 
 extern int fp4_montgomery_trick(fp4_t *A_inv,fp4_t *A,int n);
+
+extern void fp4_mul_basis(fp4_t *ANS,fp4_t *A);
+extern void fp4_mul_basis_lazy(fp4_t *ANS,fp4_t *A);
 #endif

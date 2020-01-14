@@ -17,9 +17,11 @@ mpn.c\
 fp.c\
 fp2.c\
 fp4.c\
+fp12.c\
 efp.c\
 efp2.c\
 efp4.c\
+efp12.c\
 time.c\
 ../include/ELiPS/define.h\
 ../include/ELiPS/scalar.h\
@@ -27,7 +29,9 @@ time.c\
 ../include/ELiPS/fp.h\
 ../include/ELiPS/fp2.h\
 ../include/ELiPS/fp4.h\
+../include/ELiPS/fp12.h\
 ../include/ELiPS/efp.h\
 ../include/ELiPS/efp2.h\
 ../include/ELiPS/efp4.h\
+../include/ELiPS/efp12.h\
 ../include/ELiPS/time.h

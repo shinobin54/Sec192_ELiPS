@@ -235,12 +235,12 @@ void fp12_mul_basis(fp12_t *ANS,fp12_t *A){
     fp4_set(&tmp2_fp4,&A->x1);
     fp4_set(&tmp3_fp4,&A->x2);
 	
-    fp_sub(&ANS->x0.x0,&tmp3_fp4.x0,&tmp3_fp4.x1);
-    fp_add(&ANS->x0.x1,&tmp3_fp4.x0,&tmp3_fp4.x1);
-    fp_set(&ANS->x1.x0,&tmp1_fp4.x0);
-    fp_set(&ANS->x1.x1,&tmp1_fp4.x1);
-    fp_set(&ANS->x2.x0,&tmp2_fp4.x0);
-    fp_set(&ANS->x2.x1,&tmp2_fp4.x1);
+    fp2_sub(&ANS->x0.x0,&tmp3_fp4.x0,&tmp3_fp4.x1);
+    fp2_add(&ANS->x0.x1,&tmp3_fp4.x0,&tmp3_fp4.x1);
+    fp2_set(&ANS->x1.x0,&tmp1_fp4.x0);
+    fp2_set(&ANS->x1.x1,&tmp1_fp4.x1);
+    fp2_set(&ANS->x2.x0,&tmp2_fp4.x0);
+    fp2_set(&ANS->x2.x1,&tmp2_fp4.x1);
 }
 
 void fp12_mul_basis_lazy(fp12_t *ANS,fp12_t *A){
@@ -251,13 +251,13 @@ void fp12_mul_basis_lazy(fp12_t *ANS,fp12_t *A){
     mpn_copyd(tmp1,A->x2.x0.x0,FPLIMB);
     mpn_copyd(tmp2,A->x2.x1.x0,FPLIMB);
 	
-    fp_sub_lazy(ANS->x0.x0.x0,FPLIMB,tmp1,FPLIMB,tmp2,FPLIMB);
-    fp_add_lazy(ANS->x0.x1.x0,FPLIMB,tmp1,FPLIMB,tmp2,FPLIMB);
+    fp2_sub_lazy(ANS->x0.x0.x0,FPLIMB,tmp1,FPLIMB,tmp2,FPLIMB);
+    fp2_add_lazy(ANS->x0.x1.x0,FPLIMB,tmp1,FPLIMB,tmp2,FPLIMB);
 
-    fp_set(&ANS->x1.x0,&tmp1_fp4.x0);
-    fp_set(&ANS->x1.x1,&tmp1_fp4.x1);
-    fp_set(&ANS->x2.x0,&tmp2_fp4.x0);
-    fp_set(&ANS->x2.x1,&tmp2_fp4.x1);
+    fp2_set(&ANS->x1.x0,&tmp1_fp4.x0);
+    fp2_set(&ANS->x1.x1,&tmp1_fp4.x1);
+    fp2_set(&ANS->x2.x0,&tmp2_fp4.x0);
+    fp2_set(&ANS->x2.x1,&tmp2_fp4.x1);
 }
 void fp12_sqr(fp12_t *ANS,fp12_t *A){
     static fp4_t tmp1_fp4,tmp2_fp4,tmp3_fp4,tmp4_fp4,tmp5_fp4;
