@@ -1,0 +1,35 @@
+COST<bls12 opt ate projective compress lazy(MILLER_OPT_MONT)>
+ADD   :14905
+ADD UI:0
+SUB   :13718
+SUB UI:0
+MUL   :12799
+MUL UI:154
+SQR   :0
+INV   :0
+MOD   :6070
+time  :1.2257[ms]
+
+COST<bls12 opt ate projective 7sparse  compress lazy(MILLER_OPT_MONT)>
+ADD   :14366
+ADD UI:0
+SUB   :13410
+SUB UI:0
+MUL   :12953
+MUL UI:154
+SQR   :0
+INV   :0
+MOD   :6455
+time  :1.2455[ms]
+
+COST<bls12 opt ate projective 7sparse  compress lazy(MILLER_OPT_MONT)><-7sparse??
+ADD   :14212
+ADD UI:0
+SUB   :13179
+SUB UI:0
+MUL   :12722
+MUL UI:154
+SQR   :0
+INV   :0
+MOD   :6455
+time  :1.2344[ms]
