@@ -1,7 +1,7 @@
 #ifndef EFP_H
 #define EFP_H
 
-#include <ELiPS/fp12.h>
+#include <ELiPS/fp4.h>
 /**
  * @brief Initializes a efp_t type struct
  *

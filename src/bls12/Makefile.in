@@ -104,9 +104,7 @@ CONFIG_CLEAN_VPATH_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libelipsbls12_la_LIBADD =
 am_libelipsbls12_la_OBJECTS = bls12_generate_curve.lo \
-	bls12_generate_parameter.lo bls12_init.lo bls12_g1_scm.lo \
-	bls12_g2_scm.lo bls12_g3_exp.lo bls12_miller.lo \
-	bls12_final_exp.lo bls12_pairing.lo bls12_test.lo
+	bls12_generate_parameter.lo bls12_init.lo
 libelipsbls12_la_OBJECTS = $(am_libelipsbls12_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -300,23 +298,9 @@ AM_CPPFLAGS = -I../../include
 libelipsbls12_la_SOURCES = bls12_generate_curve.c\
 bls12_generate_parameter.c\
 bls12_init.c\
-bls12_g1_scm.c\
-bls12_g2_scm.c\
-bls12_g3_exp.c\
-bls12_miller.c\
-bls12_final_exp.c\
-bls12_pairing.c\
-bls12_test.c\
 ../../include/ELiPS/bls12_generate_curve.h\
 ../../include/ELiPS/bls12_generate_parameter.h\
-../../include/ELiPS/bls12_init.h\
-../../include/ELiPS/bls12_g1_scm.h\
-../../include/ELiPS/bls12_g2_scm.h\
-../../include/ELiPS/bls12_g3_exp.h\
-../../include/ELiPS/bls12_miller.h\
-../../include/ELiPS/bls12_final_exp.h\
-../../include/ELiPS/bls12_pairing.h\
-../../include/ELiPS/bls12_test.h
+../../include/ELiPS/bls12_init.h
 
 all: all-am
 
@@ -372,16 +356,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_final_exp.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_g1_scm.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_g2_scm.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_g3_exp.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_generate_curve.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_generate_parameter.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_init.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_miller.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_pairing.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bls12_test.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

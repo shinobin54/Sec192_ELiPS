@@ -1,4 +1,4 @@
-#include <ELiPS/bn12_generate_parameter.h>
+#include <ELiPS/bls12_generate_parameter.h>
 
 void bls12_get_epsilon(){
     fp_t inv,buf,result1,result2;
@@ -237,7 +237,7 @@ void bls12_set_frobenius_constant(){
 }
 
 void bls12_set_curve_parameter(){
-    mpn_set_ui(curve_b,FPLIMB,16);
+    mpn_set_ui(curve_b,FPLIMB,1);
 }
 
 void bls12_set_root2(){

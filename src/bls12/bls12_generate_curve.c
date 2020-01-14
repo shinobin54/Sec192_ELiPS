@@ -6,32 +6,28 @@ void bls12_generate_X(){
     mpz_init(buf);
     
     //X_binary
-    bls12_X_binary[77]=1;
-    bls12_X_binary[11]=1;
-    bls12_X_binary[9]=-1;
-    bls12_X_binary[6]=-1;
+    //bls12_X_binary[77]=1;
+    //bls12_X_binary[11]=1;
+    //bls12_X_binary[9]=-1;
+    //bls12_X_binary[6]=-1;
     
-    /*
-    //X_binary
-    bls12_X_binary[76]=1;
-    bls12_X_binary[59]=-1;
-    bls12_X_binary[11]=-1;
-    bls12_X_binary[5]=-1;
-    */
+    bls12_X_binary[48]=-1;
+    bls12_X_binary[45]=1;
+    bls12_X_binary[31]=1;
+    bls12_X_binary[7]=-1;
+    
     //X2_binary
-    bls12_X2_binary[76]=1;
-    bls12_X2_binary[10]=1;
-    bls12_X2_binary[8]=-1;
-    bls12_X2_binary[5]=-1;
+    //bls12_X2_binary[76]=1;
+    //bls12_X2_binary[10]=1;
+    //bls12_X2_binary[8]=-1;
+    //bls12_X2_binary[5]=-1;
     
-    /*
-    //X2_binary
-    bls12_X2_binary[75]=1;
-    bls12_X2_binary[58]=-1;
-    bls12_X2_binary[10]=-1;
-    bls12_X2_binary[4]=-1;
-    */
+    bls12_X2_binary[47]=-1;
+    bls12_X2_binary[44]=1;
+    bls12_X2_binary[30]=1;
+    bls12_X2_binary[6]=-1;
     
+        
     //bls12.X
     mpz_set_ui(X_z,0);
     for(i=bls12_X_length; i>=0; i--){
@@ -55,8 +51,8 @@ int bls12_generate_prime(){
     mpz_sub_ui(result,X_z,1);
     mpz_pow_ui(result,result,2);
     
-    mpz_pow_ui(buf1,X_z,4);
-    mpz_pow_ui(buf2,X_z,2);
+    mpz_pow_ui(buf1,X_z,8);
+    mpz_pow_ui(buf2,X_z,4);
     mpz_sub(buf1,buf1,buf2);
     mpz_add_ui(buf1,buf1,1);
     
@@ -103,8 +99,8 @@ int bls12_generate_order(){
     mpz_init(buf1);
     mpz_init(buf2);
     
-    mpz_pow_ui(buf1,X_z,4);
-    mpz_pow_ui(buf2,X_z,2);
+    mpz_pow_ui(buf1,X_z,8);
+    mpz_pow_ui(buf2,X_z,4);
     mpz_sub(result,buf1,buf2);
     mpz_add_ui(result,result,1);
     

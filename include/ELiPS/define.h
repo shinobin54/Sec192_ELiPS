@@ -35,8 +35,9 @@
 
 #define scalar_t mpz_t
 
-#define bls12_X_length 77
-#define bls12_X2_length 76
+
+#define bls12_X_length 48
+#define bls12_X2_length 47
 
 //#define bls12_X_length 76
 //#define bls12_X2_length 75
@@ -89,12 +90,17 @@ typedef struct
 } fp2_t;
 typedef struct
 {
-	fp2_t x0, x1, x2;
-} fp6_t;
+	fp2_t x0;
+	fp2_t x1;
+} fp4_t;
 typedef struct
 {
-	fp6_t x0, x1;
+	fp4_t x0, x1, x2;
 } fp12_t;
+typedef struct
+{
+	fp12_t x0, x1;
+} fp24_t;
 
 //tmp finite field
 extern mp_limb_t buf[FPLIMB];
@@ -116,15 +122,21 @@ typedef struct
 
 typedef struct
 {
-	fp6_t x, y;
+	fp4_t x, y;
 	int infinity;
-} efp6_t;
+} efp4_t;
 
 typedef struct
 {
 	fp12_t x, y;
 	int infinity;
 } efp12_t;
+
+typedef struct
+{
+	fp24_t x, y;
+	int infinity;
+} efp24_t;
 
 /*============================================================================*/
 /* Jacobian Elliptic Curve                                                   */
@@ -143,15 +155,21 @@ typedef struct
 
 typedef struct
 {
-	fp6_t x, y, z;
+	fp4_t x, y, z;
 	int infinity;
-} efp6_projective_t;
+} efp4_projective_t;
 
 typedef struct
 {
 	fp12_t x, y, z;
 	int infinity;
 } efp12_projective_t;
+
+typedef struct
+{
+	fp24_t x, y, z;
+	int infinity;
+} efp24_projective_t;
 
 /*============================================================================*/
 /* Jacobian Elliptic Curve                                                   */
@@ -170,15 +188,21 @@ typedef struct
 
 typedef struct
 {
-	fp6_t x, y, z;
+	fp4_t x, y, z;
 	int infinity;
-} efp6_jacobian_t;
+} efp4_jacobian_t;
 
 typedef struct
 {
 	fp12_t x, y, z;
 	int infinity;
 } efp12_jacobian_t;
+
+typedef struct
+{
+	fp24_t x, y, z;
+	int infinity;
+} efp24_jacobian_t;
 
 /*============================================================================*/
 /* Pairing functions                                                          */

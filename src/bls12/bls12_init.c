@@ -76,9 +76,10 @@ void bls12_print_parameters(){
     gmp_printf("E:y^2=x^3+%Nu\n", curve_b,FPLIMB);
     
     gmp_printf("\nmodulo polynomial\n");
-    gmp_printf("fp2 = fp[alpha]/(alpha^2+1)\n");
-    gmp_printf("fp6 = fp2[beta]/(beta^3-(alpha+1))\n");
-    gmp_printf("fp12= fp6[gamma]/(gamma^2-beta)\n");
+    gmp_printf("fp2 = fp[i]/(i^2+1)\n");
+    gmp_printf("fp4 = fp2[u]/(u^2-(i+1))\n");
+    gmp_printf("fp12= fp4[v]/(v^3-u)\n");
+    gmp_printf("fp24= fp12[w]/(w^2-v)\n");
 }
 
 void bls12_clear(){
